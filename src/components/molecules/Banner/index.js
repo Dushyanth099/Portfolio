@@ -4,7 +4,7 @@ import { FaDownload } from "react-icons/fa";
 import { RiFolderInfoFill } from "react-icons/ri";
 import TypeAnimation from "react-type-animation";
 import { motion } from "framer-motion";
-import Lottie from "react-lottie";
+import Lottie from "lottie-react";
 import coding from "../../../assets/coding.json";
 import "../../../pages/shared/Shared.css";
 import { SecondaryBtn } from "../../../components";
@@ -85,7 +85,11 @@ const Banner = () => {
         animate={{ x: 0 }}
         transition={{ duration: 1 }}
       >
-        <Lottie options={defaultOptions} height="90%" width="90%" />
+        <Lottie
+          animationData={coding}
+          loop={true}
+          style={{ height: "90%", width: "90%" }}
+        />
       </motion.div>
     </div>
   );
